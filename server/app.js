@@ -6,7 +6,7 @@ const path = require("path");
 const port = process.env.PORT || 3000;
 const reload = require("reload");
 const DIST_DIR = path.join(__dirname, "../dist");
-const HTML_FILE = path.join(DIST_DIR, "indexs.html");
+const HTML_FILE = path.join(DIST_DIR, "index.html");
 
 if (env === "development") {
   const webpack = require("webpack");
