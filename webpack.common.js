@@ -1,6 +1,6 @@
 module.exports = {
   target: "web",
-  entry: "./src/index.js",
+  entry: ["webpack-hot-middleware/client", "./src/index.js"],
   module: {
     rules: [
       {
@@ -10,16 +10,3 @@ module.exports = {
     ]
   }
 };
-// entry: './src/index.js',
-//   output: {
-//     path: __dirname + '/dist',
-//     filename: 'bundle.js'
-//   },
-//   module: {
-//     rules: [
-//       { test: /\.html$/i, loader: 'html-loader' },
-//     ]
-//   },
-
-//   plugins: [new HtmlWebpackPlugin()]
-// };

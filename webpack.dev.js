@@ -1,8 +1,9 @@
+const webpack = require("webpack");
 const path = require("path");
 const common = require("./webpack.common");
 const merge = require("webpack-merge");
-var webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 process.env.NODE_ENV = "development";
 module.exports = merge(common, {
   mode: "development",
@@ -11,10 +12,14 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/"
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(), //HMR
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   stats: {
     children: false

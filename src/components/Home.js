@@ -1,5 +1,7 @@
 import React from "react";
 
-const Home = () => <h1>Tests</h1>;
+const Home = () => {
+  return <h1>Home with RELOAD + HMR</h1>;
+};
 
 export default Home;

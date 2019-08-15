@@ -4,7 +4,7 @@
   "description": ".",
   "main": "app.js",
   "scripts": {
-    "start": "webpack --config webpack.dev.js && nodemon server/app.js",
+    "start": "webpack  --config webpack.dev.js && nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +20,6 @@
   "dependencies": {
     "config": "^3.2.2",
     "express": "^4.17.1",
-    "morgan": "^1.9.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
@@ -41,14 +40,15 @@
     "html-webpack-plugin": "3.2.0",
     "jquery": "^3.3.1",
     "mini-css-extract-plugin": "^0.5.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.19.1",
     "npm-run-all": "4.1.5",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "popper.js": "^1.14.7",
     "postcss-loader": "3.0.0",
     "redux-immutable-state-invariant": "2.1.0",
+    "reload": "^3.0.1",
     "rimraf": "2.6.3",
-    "sass-loader": "^7.1.0",
     "style-loader": "0.23.1",
     "webpack": "4.29.6",
     "webpack-bundle-analyzer": "3.1.0",
