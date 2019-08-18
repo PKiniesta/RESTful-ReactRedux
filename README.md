@@ -9,5 +9,3 @@
   - split  ports BACKEND|FRONTED 
 
 
-- **in progress...**
-  - fix eslint (warning only on console)
