@@ -1,6 +1,6 @@
 module.exports = {
   target: "web",
-  entry: ["webpack-hot-middleware/client", "./src/index.js"],
+  entry: "./client/src/index.js",
   module: {
     rules: [
       {

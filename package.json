@@ -4,8 +4,10 @@
   "description": ".",
   "main": "app.js",
   "scripts": {
-    "start": "webpack  --config webpack.dev.js && nodemon server/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon server/app.js",
+    "start": "webpack-dev-server --port 9000 --config ./client/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "run-p  server  start"
   },
   "repository": {
     "type": "git",
@@ -20,8 +22,12 @@
   "dependencies": {
     "config": "^3.2.2",
     "express": "^4.17.1",
+    "mongoose": "^5.6.9",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
@@ -38,7 +44,7 @@
     "file-loader": "^3.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "3.2.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "mini-css-extract-plugin": "^0.5.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1",
@@ -65,7 +71,7 @@
     "delay": "1500",
     "env": {
       "NODE_ENV": "development",
-      "PORT": 4000
+      "PORT": 5000
     }
   },
   "babel": {
