@@ -2,7 +2,7 @@
 
 - **completed**
   - Config express + react + webpack dev
-
+  - Connected to mongoDB
 
 
 - **CHANGE!**
