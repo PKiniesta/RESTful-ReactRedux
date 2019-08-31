@@ -1,0 +1,33 @@
+#app {
+  position: relative;
+
+  margin: 0 auto;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+nav {
+  padding: 20px 0 20px 0;
+}
+
+a {
+  color: #6c757d;
+}
+
+a:hover {
+  color: black;
+}
+
+select {
+  background-color: #6c757d;
+}
+
+#tr-hover:hover {
+  background-color: #bdd1dfe3;
+}
+
+.main {
+  min-height: 80vh;
+}
