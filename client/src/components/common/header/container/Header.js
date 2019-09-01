@@ -11,6 +11,7 @@ const Header = ({ authorization, logout }) => {
   const [username, setUsername] = useState();
   const logoutClick = () => {
     logout();
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -42,7 +43,6 @@ const Header = ({ authorization, logout }) => {
       isAuth={isAuth}
       userRoutes={userRoutes}
       questRoutes={questRoutes}
-      authorization={authorization}
     />
   );
 };

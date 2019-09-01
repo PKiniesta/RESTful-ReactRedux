@@ -1,15 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const TextInput = ({
-  name,
-  label,
-  onChange,
-  placeholder,
-  value,
-  error,
-  type
-}) => {
+const Input = ({ name, label, onChange, placeholder, value, error, type }) => {
   let errorClass = "form-group";
   if (error && error.length > 0) {
     errorClass += " " + "has-error";
@@ -22,7 +14,7 @@ const TextInput = ({
         <input
           type={type}
           name={name}
-          className="form-control "
+          className="form-control"
           placeholder={placeholder}
           value={value}
           onChange={onChange}
@@ -33,7 +25,7 @@ const TextInput = ({
   );
 };
 
-TextInput.propTypes = {
+Input.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
@@ -43,4 +35,4 @@ TextInput.propTypes = {
   type: PropTypes.string
 };
 
-export default TextInput;
+export default Input;

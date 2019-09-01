@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TextInput from "../../../common/TextInput";
+import Input from "../../../common/Input";
 
 const Form = ({ author, onChange, onSave, setBack, errors = {}, saving }) => {
   return (
@@ -13,7 +13,7 @@ const Form = ({ author, onChange, onSave, setBack, errors = {}, saving }) => {
             {errors.onSave}
           </div>
         )}
-        <TextInput
+        <Input
           type="text"
           name="name"
           label="Name"

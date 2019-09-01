@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import TextInput from "../../common/TextInput";
-import SelectInput from "../../common/SelectInput";
+import Input from "../../common/Input";
+import Select from "../../common/Select";
 import { Redirect } from "react-router-dom";
 
 const Form = ({
@@ -24,7 +24,7 @@ const Form = ({
             {errors.onSave}
           </div>
         )}
-        <TextInput
+        <Input
           type="text"
           name="title"
           label="Title"
@@ -33,7 +33,7 @@ const Form = ({
           error={errors.title}
         />
 
-        <SelectInput
+        <Select
           name="authorId"
           label="Author"
           value={course.authorId || ""}
@@ -46,7 +46,7 @@ const Form = ({
           error={errors.author}
         />
 
-        <TextInput
+        <Input
           type="text"
           name="category"
           label="Category"

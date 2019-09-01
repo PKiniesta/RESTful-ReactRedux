@@ -9,7 +9,7 @@ import SearchBar from "../../common/SearchBar";
 import { Redirect } from "react-router-dom";
 import sortedCourses from "../../../redux/reselect/sortedCourses";
 import Pagination from "../../common/Pagination";
-import SelectInput from "../../common/SelectInput";
+import Select from "../../common/Select";
 import { NotificationManager } from "react-notifications";
 import { css } from "@emotion/core";
 import { BarLoader } from "react-spinners";
@@ -123,7 +123,7 @@ export function Courses({
             RedirectToAddCourse={onClickRedirectToAddCourse}
             RedirectToAuthors={onClickRedirectToAuthors}
             filterText={filterText}
-            SelectInput={SelectInput}
+            SelectInput={Select}
             onChangeCoursesPerPage={onChangeSelectCourses}
           />
           <Pagination

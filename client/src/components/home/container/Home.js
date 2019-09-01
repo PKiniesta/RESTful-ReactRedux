@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import * as authorizationActions from "../../../redux/actions/authorizationActions";
-import HomePage from "../presntational/HomePage";
+import HomePage from "../presentational/HomePage";
 import PropTypes from "prop-types";
 
 const Home = ({ login, isAuthenticated }) => {

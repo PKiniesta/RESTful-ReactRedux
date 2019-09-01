@@ -1,6 +1,6 @@
 import React from "react";
 import "../home.css";
-import TextInput from "../../common/TextInput";
+import Input from "../../common/Input";
 import PropTypes from "prop-types";
 
 const HomePage = ({
@@ -23,10 +23,9 @@ const HomePage = ({
               <div className="alert alert-danger">{errors.network}</div>
             )}
             <h3>Login</h3>
-            <button onClick={() => console.log(errors)}>123</button>
             <form onSubmit={onSave}>
-              <div className="form-group">
-                <TextInput
+              <div className="form-group login">
+                <Input
                   name="login"
                   placeholder="Your email"
                   value={user.login}
@@ -35,7 +34,7 @@ const HomePage = ({
                 />
               </div>
               <div className="form-group">
-                <TextInput
+                <Input
                   name="password"
                   placeholder="Your password"
                   value={user.password}
@@ -46,8 +45,12 @@ const HomePage = ({
               </div>
 
               <div className="form-group">
-                <button type="submit" className="btnSubmit" disabled={loading}>
-                  Submit
+                <button
+                  type="submit"
+                  className="btnSubmit w-100"
+                  disabled={loading}
+                >
+                  Sign in
                 </button>
               </div>
             </form>
