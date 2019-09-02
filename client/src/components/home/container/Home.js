@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import * as authorizationActions from "../../../redux/actions/authorizationActions";
-import HomePage from "../presentational/HomePage";
+import Page from "../presentational/Page";
 import PropTypes from "prop-types";
 
 const Home = ({ login, isAuthenticated }) => {
@@ -60,7 +60,7 @@ const Home = ({ login, isAuthenticated }) => {
     }));
   }
   return (
-    <HomePage
+    <Page
       isAuthenticated={isAuthenticated}
       errors={errors}
       loading={loading}

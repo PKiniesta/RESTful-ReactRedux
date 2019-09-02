@@ -14,25 +14,32 @@ const List = ({
   onClickSortAuthors,
   onClickSortCategory,
   sortedCategory,
-  onChangeCoursesPerPage
+  onChangeCoursesPerPage,
+  isAuthenticated
 }) => {
   return (
     <>
-      <button
-        type="button"
-        disabled={!courses.length}
-        className="btn btn-secondary w-25 mb-1 mt-1 add-course"
-        onClick={RedirectToAddCourse}
-      >
-        Add Course
-      </button>
-      <button
-        type="button"
-        className="btn btn-secondary w-25  ml-1 mb-1 mt-1 authors-redirect"
-        onClick={RedirectToAuthors}
-      >
-        Authors
-      </button>
+      {isAuthenticated ? (
+        <>
+          <button
+            type="button"
+            disabled={!courses.length}
+            className="btn btn-secondary w-25 mb-1 mt-1 add-course"
+            onClick={RedirectToAddCourse}
+          >
+            Add Course
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary w-25  ml-1 mb-1 mt-1 authors-redirect"
+            onClick={RedirectToAuthors}
+          >
+            Authors
+          </button>
+        </>
+      ) : (
+        <span></span>
+      )}
 
       <div>
         <h4 className="text-center text-dark mt-4 ">Sort options</h4>
@@ -112,11 +119,16 @@ const List = ({
                       </a>
                     </td>
                     <td>
-                      <button
-                        className="btn btn-outline-warning"
-                        onClick={() => onDeleteClick(course)}
-                      />
-                      Delete
+                      {isAuthenticated ? (
+                        <button
+                          className="btn btn-outline-warning"
+                          onClick={() => onDeleteClick(course)}
+                        >
+                          Delete
+                        </button>
+                      ) : (
+                        <span></span>
+                      )}
                     </td>
                   </tr>
                 );
@@ -140,7 +152,8 @@ List.propTypes = {
   onClickSortAuthors: PropTypes.func.isRequired,
   onClickSortCategory: PropTypes.func.isRequired,
   sortedCategory: PropTypes.bool.isRequired,
-  onChangeCoursesPerPage: PropTypes.func.isRequired
+  onChangeCoursesPerPage: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired
 };
 
 export default List;

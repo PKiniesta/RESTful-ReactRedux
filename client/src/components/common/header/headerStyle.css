@@ -1,3 +1,7 @@
 .userName a:hover {
   cursor: default;
 }
+
+.logout a:hover {
+  cursor: pointer;
+}

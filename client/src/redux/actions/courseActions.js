@@ -1,5 +1,5 @@
 import * as types from "./actionTypes";
-import * as courseApi from "../../api/courseApi";
+import * as courseCall from "../../apiReq/courseCall";
 import { ApiCall, apiCallErr } from "./apiStatusActions";
 
 export function loadCourseOK(courses) {
@@ -31,7 +31,7 @@ export function loadCourses() {
   //thunk
   return function(dispatch) {
     dispatch(ApiCall()); // remember to include the () so the function is invoked
-    return courseApi
+    return courseCall
       .getCourses()
       .then(courses => {
         dispatch(loadCourseOK(courses));
@@ -46,7 +46,7 @@ export function loadCourses() {
 export function saveCourse(course) {
   return function(dispatch) {
     dispatch(ApiCall());
-    return courseApi
+    return courseCall
       .saveCourse(course)
       .then(savedCourse => {
         course._id
@@ -63,6 +63,6 @@ export function saveCourse(course) {
 export function deleteCourse(course) {
   return function(dispatch) {
     dispatch(deleteCourseNoWaitingApi(course));
-    return courseApi.deleteCourse(course._id);
+    return courseCall.deleteCourse(course._id);
   };
 }

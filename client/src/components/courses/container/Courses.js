@@ -27,7 +27,8 @@ export function Courses({
   setSortedCoursesCategory,
   deleteCourse,
   numberss,
-  loading
+  loading,
+  isAuthenticated
 }) {
   const [redirectToAddCoursePage, setRedirectToAddCoursePage] = useState(false);
   const [redirectToAuthorsPage, setRedirectToAuthorsPage] = useState(false);
@@ -125,6 +126,7 @@ export function Courses({
             filterText={filterText}
             SelectInput={Select}
             onChangeCoursesPerPage={onChangeSelectCourses}
+            isAuthenticated={isAuthenticated}
           />
           <Pagination
             coursesPerPage={coursesPerPage}
@@ -150,7 +152,8 @@ Courses.propTypes = {
   setSortedCoursesCategory: PropTypes.func.isRequired,
   sortedAuthors: PropTypes.bool.isRequired,
   sortedCourses: PropTypes.bool.isRequired,
-  sortedCategory: PropTypes.bool.isRequired
+  sortedCategory: PropTypes.bool.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired
 };
 
 function mapStateToProps(state) {

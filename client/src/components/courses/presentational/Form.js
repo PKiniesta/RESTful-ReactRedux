@@ -33,6 +33,15 @@ const Form = ({
           error={errors.title}
         />
 
+        <Input
+          type="text"
+          name="category"
+          label="Category"
+          value={course.category}
+          onChange={onChange}
+          error={errors.category}
+        />
+
         <Select
           name="authorId"
           label="Author"
@@ -44,15 +53,6 @@ const Form = ({
           }))}
           onChange={onChange}
           error={errors.author}
-        />
-
-        <Input
-          type="text"
-          name="category"
-          label="Category"
-          value={course.category}
-          onChange={onChange}
-          error={errors.category}
         />
 
         <button type="submit" disabled={saving} className="btn btn-secondary">

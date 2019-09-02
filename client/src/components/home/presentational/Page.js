@@ -3,14 +3,7 @@ import "../home.css";
 import Input from "../../common/Input";
 import PropTypes from "prop-types";
 
-const HomePage = ({
-  isAuthenticated,
-  errors,
-  loading,
-  onChange,
-  onSave,
-  user
-}) => {
+const Page = ({ isAuthenticated, errors, loading, onChange, onSave, user }) => {
   return (
     <div className="container login-container">
       <div className="row justify-content-center">
@@ -61,7 +54,7 @@ const HomePage = ({
   );
 };
 
-HomePage.propTypes = {
+Page.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
   errors: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
@@ -70,4 +63,4 @@ HomePage.propTypes = {
   user: PropTypes.object.isRequired
 };
 
-export default HomePage;
+export default Page;
