@@ -10,15 +10,12 @@ export default function apiStatusReducer(
   action
 ) {
   if (action.type == types.API_CALL) {
-    // for simple reducers if is good
     return state + 1;
   } else if (
-    action.type === types.API_CALL_ERR || // when api got error , redux didint notice that , and didnt decrement api call
+    action.type === types.API_CALL_ERR ||
     actionTypeEndsInOK(action.type)
   ) {
     return state - 1;
   }
   return state;
 }
-
-//remember to add reducers to our index.js root reducer. If i ever set breakpoint in reducer and u see he is never called , that is most likely that we forgot to add him to root reducer

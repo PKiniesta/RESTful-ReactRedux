@@ -20,7 +20,6 @@ const Header = ({ authorization, logout }) => {
   }, [authorization]);
   const userRoutes = (
     <>
-      <button onClick={() => console.log(authorization)}></button>
       <li className="nav-item ml-2 mr-2 userName">
         <a className="nav-link text-primary">{username}</a>
       </li>

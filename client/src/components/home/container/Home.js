@@ -26,7 +26,7 @@ const Home = ({ login, isAuthenticated }) => {
     return Object.keys(errors).length === 0;
   }
 
-  function onSave(event) {
+  function onClickSign(event) {
     event.preventDefault();
     if (!isValid()) return;
     setLoading(true);
@@ -65,7 +65,7 @@ const Home = ({ login, isAuthenticated }) => {
       errors={errors}
       loading={loading}
       onChange={onChange}
-      onSave={onSave}
+      onClickSign={onClickSign}
       user={user}
     />
   );

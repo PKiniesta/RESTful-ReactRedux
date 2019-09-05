@@ -3,7 +3,14 @@ import "../home.css";
 import Input from "../../common/Input";
 import PropTypes from "prop-types";
 
-const Page = ({ isAuthenticated, errors, loading, onChange, onSave, user }) => {
+const Page = ({
+  isAuthenticated,
+  errors,
+  loading,
+  onChange,
+  onClickSign,
+  user
+}) => {
   return (
     <div className="container login-container">
       <div className="row justify-content-center">
@@ -16,7 +23,7 @@ const Page = ({ isAuthenticated, errors, loading, onChange, onSave, user }) => {
               <div className="alert alert-danger">{errors.network}</div>
             )}
             <h3>Login</h3>
-            <form onSubmit={onSave}>
+            <form onSubmit={onClickSign}>
               <div className="form-group login">
                 <Input
                   name="login"
@@ -59,7 +66,7 @@ Page.propTypes = {
   errors: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
-  onSave: PropTypes.func.isRequired,
+  onClickSign: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired
 };
 

@@ -9,12 +9,11 @@ import { BarLoader } from "react-spinners";
 import { NotificationManager } from "react-notifications";
 
 export function ManageCourse({
-  //this file contains 2 exports: 1. Unconnected component 2.Connected component (on the bottom of file) ::REDUX TESTS
   courses,
   authors,
   loadAuthors,
   loadCourses,
-  saveCourse, // calling saveCourse in our component will call the saveCourse function we just bound to dispatch in mapDispatchToProps
+  saveCourse,
   history,
   loading,
   ...props
@@ -22,7 +21,6 @@ export function ManageCourse({
   const [course, setCourse] = useState({ ...props.course });
   const [errors, setErrors] = useState({});
   const [saving, setSaving] = useState(false);
-  //...props = author , or we can use other way to handle that : author: initialAuthor
 
   const override = css`
     width: 250px;
@@ -52,7 +50,7 @@ export function ManageCourse({
     setCourse(prevCourse => ({
       ...prevCourse,
       [name]: name === "authorId" ? value : value
-    })); // USING object computed property
+    }));
   }
 
   function formIsValid() {
@@ -128,7 +126,7 @@ export function getCourseBySlug(courses, slug) {
 }
 
 function mapStateToProps(state, ownProps) {
-  const slug = ownProps.match.params.slug; // app.js /courses/:slug
+  const slug = ownProps.match.params.slug;
   const course =
     slug && state.courses.length > 0
       ? getCourseBySlug(state.courses, slug)

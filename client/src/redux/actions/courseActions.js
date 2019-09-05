@@ -13,7 +13,7 @@ export function createCourseOK(course) {
   return {
     type: types.CREATE_COURSE_OK,
     course
-  }; //object SHORTHAND  course:course
+  };
 }
 
 export function updateCourseOK(course) {
@@ -28,9 +28,8 @@ export function deleteCourseNoWaitingApi(course) {
 }
 
 export function loadCourses() {
-  //thunk
   return function(dispatch) {
-    dispatch(ApiCall()); // remember to include the () so the function is invoked
+    dispatch(ApiCall());
     return courseCall
       .getCourses()
       .then(courses => {

@@ -1,4 +1,5 @@
 const slug = require("slug");
+
 const settingsSlug = {
   replacement: "-",
   symbols: true,

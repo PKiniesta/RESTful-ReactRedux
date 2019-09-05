@@ -45,7 +45,6 @@ const Authors = ({
   const paginate = pageNumber => setCurrentPage(pageNumber);
   useEffect(() => {
     if (authors.length === 0) {
-      //if -- only load data when we have empty array
       loadAuthors().catch(error => {
         alert("fail" + error);
       });
@@ -53,7 +52,7 @@ const Authors = ({
         alert("failt" + error);
       });
     }
-  }, []); //empty array as second arg , to update only when variables changes
+  }, []);
 
   function nameDivide(a) {
     const authorSplitedName = a.split(" ");
@@ -67,8 +66,6 @@ const Authors = ({
   };
 
   const onClickDeleteAuthor = async (author, courses) => {
-    // console.log(author.id);
-    // courses.map(course => console.log(course.title));
     if (courses.find(course => course.authorId === author._id)) {
       NotificationManager.error("AUTHOR HAVE COURSE OR COURSES!!! CANT DELETE");
     } else {
