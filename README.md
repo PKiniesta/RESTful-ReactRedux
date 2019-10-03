@@ -1,9 +1,9 @@
-**APP EXPRESS REACT REDUX WEBPACK ManageCOURSES**
+**APP EXPRESS+REACT+REDUX+WEBPACK+MongoDB ManageCOURSES**
 
 - **completed**
   - Config express + react + webpack dev
   - Connected to mongoDB
-  - FRONT + BACK
+  - FRONT(React + Redux) + BACK(Express)
 
 
 - **CHANGE!**
