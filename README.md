@@ -17,6 +17,8 @@
 - **USERR**
   - CAN SEE COURSES IN DATABASE
 
+- **IMAGES OF RUNNING APP**
+  - in /documentation
   
 
 - **TO RUN**
