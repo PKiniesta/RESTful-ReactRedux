@@ -7,8 +7,8 @@
   - Redux
   - WebPack
   - **LOGIN**
-  - BCRYPT
-  - JSONWEBTOKEN(BROWSER LOCAL STORAGE)
+    - BCRYPT
+    - JSONWEBTOKEN (BROWSER LOCAL STORAGE)
   
 
 
