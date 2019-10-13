@@ -1,16 +1,13 @@
 **APP EXPRESS+REACT+REDUX+WEBPACK+MongoDB ManageCOURSES**
 
-- **completed**
-  - Config express + react + webpack dev
-  - Connected to mongoDB
-  - FRONT(React + Redux) + BACK(Express)
+- **APP USING**
+  - Express(NodeJS)
+  - mongoDB
+  - React
+  - Redux
+  
 
 
-- **CHANGE!**
-  - split  ports BACKEND|FRONTED 
-  - Update slug
-  - update Home
-  - 
 
 
 - **TO RUN**
