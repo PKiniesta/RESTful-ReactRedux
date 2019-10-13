@@ -6,6 +6,9 @@
   - React
   - Redux
   - WebPack
+  - **LOGIN**
+  - BCRYPT
+  - JSONWEBTOKEN(BROWSER LOCAL STORAGE)
   
 
 
