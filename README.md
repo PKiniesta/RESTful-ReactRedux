@@ -17,7 +17,7 @@
 - **USERR**
   - CAN SEE COURSES IN DATABASE
 
-- **IMAGES OF RUNNING APP**
+- **IMAGES OF WORKING APP**
   - in /documentation
   
 
